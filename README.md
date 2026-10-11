@@ -34,9 +34,9 @@ ros2 launch jackal_helper jackal_nav2.launch.py
 
 Core topics include `/scan`, `/imu`, `/odometry/local`, `/odometry/aruco` and `/cmd_vel`.
 
-## Team and provenance
+## Project team
 
-University team project by **Aziz Zarrouki, Rayan Brigui and Jihed Khattat**. The `jackal_helper` package names Aziz as maintainer. This curated portfolio copy focuses on the student package and World 037 material; the bulk upstream BARN world corpus is deliberately excluded.
+University team project by **Aziz Zarrouki, Rayan Brigui and Jihed Khattat**. The `jackal_helper` package names Aziz as maintainer. This repository focuses on the team's package and World 037; the rest of the upstream BARN world corpus is not duplicated here.
 
 Robot meshes and inherited simulation material originate from the ROS ecosystem and remain subject to their original notices and licenses. The package's bundled license is preserved.
 

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>jackal_helper</name>
+  <version>0.0.0</version>
+  <description>ROS 2 localization and Nav2 support for the course-specific BARN challenge.</description>
+
+  <maintainer email="206670636+aziz7042@users.noreply.github.com">Aziz Zarrouki</maintainer>
+  <license>Apache-2.0</license>
+
+  <author>Aziz Zarrouki</author>
+  <author>Rayan Brigui</author>
+  <author>Jihed Khattat</author>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  
+  <!-- Core ROS 2 -->
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>python3-catkin-pkg</depend>
+
+  <!-- Clearpath repositories -->
+  <depend>clearpath_common</depend>
+  <depend>clearpath_config</depend>
+  <depend>clearpath_msgs</depend>
+  <depend>clearpath_simulator</depend>
+
+  <!-- Messages -->
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_msgs</depend>
+  <depend>tf2_ros</depend>
+
+  <!-- Gazebo Sim bridge interfaces -->
+  <depend>ros_gz_interfaces</depend>
+
+  <!-- Navigation -->
+  <depend>nav2_bringup</depend>
+  <exec_depend>nav2_bt_navigator</exec_depend>
+
+  <!-- Makes the launch files available to ros2 launch command.  -->
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+  <depend>geometry_msgs</depend>
+  <exec_depend>robot_localization</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>nav2_smac_planner</exec_depend>
+  <exec_depend>nav2_regulated_pure_pursuit_controller</exec_depend>
+  <exec_depend>nav2_collision_monitor</exec_depend>
+  <exec_depend>nav2_velocity_smoother</exec_depend>
+  <exec_depend>nav2_behaviors</exec_depend>
+</package>

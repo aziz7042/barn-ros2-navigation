@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+
+  <world name="037_aruco">
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre</render_engine>
+    </plugin>
+    <plugin
+      filename="gz-sim-imu-system"
+      name="gz::sim::systems::Imu">
+    </plugin>
+
+    <!-- INCLUDE BASE ROOM -->
+    <include>
+      <uri>package://jackal_helper/worlds/037/037_base.sdf</uri>
+    </include>    
+    
+    <!-- INCLUDE Obstacles -->
+    <include>
+      <uri>package://jackal_helper/worlds/037/037_obstacles_base.sdf</uri>
+    </include>
+
+    <!-- INCLUDE ARUCO default -->
+    <include>
+      <uri>package://jackal_helper/worlds/037/037_aruco_default.sdf</uri>
+    </include>
+
+    <!-- INCLUDE ARUCO base -->
+    <include>
+      <uri>package://jackal_helper/worlds/037/037_aruco_base.sdf</uri>
+    </include>
+
+
+        <!-- Sun and physics -->
+    <light name="sun_light" type="point">
+    <cast_shadows>true</cast_shadows>
+    <pose>0 0 10 0 0 0</pose>
+
+    <diffuse>1 1 1 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+
+    <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+    </attenuation>
+
+    <direction>-0.5 0.1 -1</direction>
+    </light>
+
+    <physics type="ode">
+      <gravity>0 0 -9.81</gravity>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+
+    <!-- ARUCO 0 -->
+    <model name="aruco_0">
+      <static>true</static>
+      <pose>-2.99 2.0 1.0 0 1.5708 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.4 0.4</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+              <pbr>
+                <metal>
+                <albedo_map>package://jackal_helper/materials/4x4_1000-0.png</albedo_map>
+                </metal>
+              </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ARUCO 1 -->
+    <model name="aruco_1">
+      <static>true</static>
+      <pose>2.99 2.0 1.0 0 1.5708 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 0 -1</normal><size>0.4 0.4</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+              <pbr>
+                <metal>
+                <albedo_map>package://jackal_helper/materials/4x4_1000-1.png</albedo_map>
+                </metal>
+              </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ARUCO 2 -->
+    <model name="aruco_2">
+      <static>true</static>
+      <pose>0 -4.24 1.0 0 1.5708 1.5708</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.4 0.4</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+              <pbr>
+                <metal>
+                <albedo_map>package://jackal_helper/materials/4x4_1000-2.png</albedo_map>
+                </metal>
+              </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

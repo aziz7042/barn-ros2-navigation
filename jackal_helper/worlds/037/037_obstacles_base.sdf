@@ -1,0 +1,67 @@
+<sdf version="1.7">
+    <model name="037_obstacles_base">
+
+        
+        
+        
+        
+        <static>true</static><link name="table_clump_left">
+        <pose>-1.40 0 0.5 0 0 0</pose>
+
+        <collision name="table_clump_left_collision">
+            <geometry>
+            <box>
+                <size>3.2 1.6 1.0 0 0 0</size>
+            </box>
+            </geometry>
+        </collision>
+
+        <visual name="table_clump_left_visual">
+            <geometry>
+            <box>
+                <size>3.2 1.6 1.0 0 0 0</size>
+            </box>
+            </geometry>
+
+            <material>
+            <ambient>0.6510 0.6235 0.5725 1</ambient>
+            <diffuse>0.6510 0.6235 0.5725 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            </material>
+        </visual>
+        </link>
+
+        <link name="table_clump_right_bottom">
+        <pose>2.2 -3.75 0.5 0 0 0</pose>
+
+        <collision name="table_clump_right_bottom_collision">
+            <geometry>
+            <box>
+                <size>1.6 1.0 1.0 0 0 0</size>
+            </box>
+            </geometry>
+        </collision>
+
+
+        
+        
+        
+        
+
+        <visual name="table_clump_right_bottom_visual">
+            <geometry>
+            <box>
+                <size>1.6 1.0 1.0 0 0 0</size>
+            </box>
+            </geometry>
+
+            <material>
+            <ambient>0.6510 0.6235 0.5725 1</ambient>
+            <diffuse>0.6510 0.6235 0.5725 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            </material>
+        </visual>
+        </link>
+    
+    </model>
+</sdf>

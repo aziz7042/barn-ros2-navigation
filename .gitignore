@@ -1,0 +1,12 @@
+build/
+install/
+log/
+.colcon/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

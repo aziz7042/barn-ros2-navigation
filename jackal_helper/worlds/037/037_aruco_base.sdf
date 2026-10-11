@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+<model name="aruco_base">
+    <!-- ARUCO 3 -->
+    <model name="aruco_3">
+      <static>true</static>
+      <pose>1.39 -3.75  0.3 1.5708 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane><normal>-1 0 0</normal><size>0.4 0.4</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+              <pbr>
+                <metal>
+                <albedo_map>package://jackal_helper/materials/4x4_1000-3.png</albedo_map>
+                </metal>
+              </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ARUCO 4 -->
+    <model name="aruco_4">
+      <static>true</static>
+      <pose>-1.40 -0.81 0.3 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 -1 0</normal><size>0.4 0.4</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+              <pbr>
+                <metal>
+                <albedo_map>package://jackal_helper/materials/4x4_1000-4.png</albedo_map>
+                </metal>
+              </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ARUCO 5 -->
+    <model name="aruco_5">
+      <static>true</static>
+      <pose>-1.40 0.81 0.3 0 -3.1415 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 1 0</normal><size>0.4 0.4</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+              <pbr>
+                <metal>
+                <albedo_map>package://jackal_helper/materials/4x4_1000-5.png</albedo_map>
+                </metal>
+              </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+</model>
+</sdf>
